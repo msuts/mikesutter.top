@@ -1,0 +1,65 @@
+/* Global Styles */
+body {
+    background-color: #1a1a1a; /* Dark grayish background */
+    color: #e6e6e6; /* Light gray text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #55acee; /* Twitter blue color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    color: #007bb5; /* Darker shade of blue on hover */
+}
+
+a:visited {
+    color: #990099; /* Purple color for visited links */
+}
+
+a:visited:hover {
+    color: #660066; /* Darker shade of purple for visited links on hover */
+}
+
+/* Layout Styles */
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.blurb {
+    margin-bottom: 20px;
+}
+
+/* Bulleted Lists for Index Page */
+.index-page ul {
+    list-style-type: disc;
+    margin-left: 20px; /* Regular indentation for index page */
+    padding-left: 20px;
+}
+
+/* Bulleted Lists for Artist Pages */
+.artist-page ul {
+    width: 246px; /* Set a fixed width for each column */
+    padding: 0px; /* Add padding around each column */
+    margin: 0 10px; /* Adjust margin to reduce space between columns */
+    box-sizing: border-box; /* Include padding and border in the column's total width */
+}
+
+.artist-page h2 {
+    text-align: center; /* Center the h2 elements on artist pages */
+}
+
+.columns {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Wrap columns to the next line if they don't fit */
+    justify-content: space-between; /* Distribute space between columns */
+}
