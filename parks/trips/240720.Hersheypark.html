@@ -74,8 +74,21 @@
 <li>Laff Trakk</li>
 </ol>
 
-<div class="back-button">
-            <p><a href="../parks_index.html" target="_blank" rel="noopener noreferrer">Back to Parks Page</a></p>
-			<p><a href="../../index.html" target="_blank" rel="noopener noreferrer">Home Page</a></p>
-        </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("../footers/footer_parks.html")  // Adjust path as needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log("Footer loaded successfully");
+            document.getElementById("container").insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => console.error("Error loading footer:", error));
+});
+
+</script>
 </div>
