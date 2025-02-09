@@ -53,10 +53,7 @@
             </ul>
         </div>
 		<br>
-		
-    </div>
-	
-	        <script>
+		<script>
 document.addEventListener("DOMContentLoaded", function() {
     fetch("../footers/footer_main.html")  // Adjust path as needed
         .then(response => {
@@ -67,12 +64,15 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
             console.log("Footer loaded successfully");
-            document.body.insertAdjacentHTML("beforeend", data);
+            document.getElementById("container").insertAdjacentHTML("beforeend", data);
         })
         .catch(error => console.error("Error loading footer:", error));
 });
 
 </script>
+    </div>
+	
+	        
 	
 </body>
 </html>
