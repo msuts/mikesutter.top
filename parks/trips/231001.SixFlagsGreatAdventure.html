@@ -46,8 +46,21 @@
 <p>The ride lineup here is hard to beat and only improving with the addition of the Vekoma Super Boomerang. With that said, this park still has room to grow, and the old arena is finally getting torn down (you can see the demo work from Medusa). That&#39;d be a good place to put a big ride. Let&#39;s hope for a great 2024 for this park chain.</p>
 
 
-<div class="back-button">
-            <p><a href="../parks_index.html" target="_blank" rel="noopener noreferrer">Back to Parks Page</a></p>
-			<p><a href="../../index.html" target="_blank" rel="noopener noreferrer">Home Page</a></p>
-        </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("../../footers/footer_parks.html")  // Adjust path as needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log("Footer loaded successfully");
+            document.getElementById("container").insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => console.error("Error loading footer:", error));
+});
+
+</script>
 </div>
