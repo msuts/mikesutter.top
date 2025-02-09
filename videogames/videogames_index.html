@@ -22,9 +22,23 @@
             </ul>
         </div>
 		<br>
-        <div class="back-button">
-            <p><a href="../index.html">Home Page</a></p>
-        </div>
+		<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("../footers/footer_main.html")  // Adjust path as needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log("Footer loaded successfully");
+            document.getElementById("container").insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => console.error("Error loading footer:", error));
+});
+
+</script>
     </div>
 </body>
 </html>
