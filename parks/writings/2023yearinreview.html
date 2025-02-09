@@ -97,8 +97,21 @@
 <p>2024 holds promise - Six Flags passes means for sure some visits to Great Adventure as well as SFNE, where I have yet to ride Flashback, their resident Boomerang. Visiting SFNE likely means a visit or two to Lake Compounce as well, where I still have yet to ride <em>their</em> Boomerang. We&#39;re also looking at a trip up the east coast to visit Carowinds, Busch Gardens Williamsburg, Kings Dominion, and possibly Six Flags America, which I last visited before I got my proper sea legs (er... coaster legs). Happy New Year everybody!</p>
 
 
-<div class="back-button">
-            <p><a href="../parks_index.html" target="_blank" rel="noopener noreferrer">Back to Parks Page</a></p>
-			<p><a href="../../index.html" target="_blank" rel="noopener noreferrer">Home Page</a></p>
-        </div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("../../footers/footer_parks.html")  // Adjust path as needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log("Footer loaded successfully");
+            document.getElementById("container").insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => console.error("Error loading footer:", error));
+});
+
+</script>
 </div>
