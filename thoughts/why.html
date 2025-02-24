@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Sutter's Website - Why an Old-School Website?</title>
+    <meta name="description" content="I explain why I made an old-school website for my stuff.">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+<div id="container">
+<h1>Why I decided to make an old-school website</h1>
+<p>I've been using the Internet since I was very young. I watched my older brother browse AOL when I was in diapers, and shocked my family when I figured out how to log in and browse the web on my own. I couldn't have been older than four years old when I first did this (1998-1999).</p>
+
+<p>In the 25+ years that have passed, the Internet has gone from that “wild west” with hundreds of disconnected sites and forums to a very centralized place, with only a few main hubs for communication about several topics. While some of those old forums remain (e.g. Steve Hoffman Forums, Sonic Retro, Audiokarma), enthusiast sites of that ilk have largely been replaced by Reddit and Discord.</p>
+
+<p>It's also gone far more mainstream in that time. Up until the mid 2000s, the Internet was somewhere you needed to purposefully visit. When you were finished, you left the Internet where you found it. If an argumentative nerd pissed you off online, you could walk away. Now we're forced to carry the Internet with us in our pockets. Everybody's on some combination of Facebook and Instagram. Many also use Twitter. I've used all of these sites heavily for the past 17 years. Your mother uses the Internet. Your grandmother uses the Internet.&nbsp;</p>
+
+<p>One tweet, one Reddit post, one Facebook comment can set off a chain reaction of negativity and unwarranted debate. For some odd reason, the default response on the Internet for decades has been to loudly argue. In today's irrational world, under a horrific administration which emboldens a population fraught with lead-paint-poisoned bigots, the constant arguing and negativity finally caused me to crack. Life is too short to argue with strangers over nothing important. Especially when those strangers are often ill-informed and ill-intentioned.</p>
+
+<p>It started with Twitter. I loved that site for many years, especially thanks to the humor of Weird Twitter and the community surrounding Mets Twitter. When that idiot doofus criminal jerkoff white supremacist Nazi Elon Musk bought the site, it wasn't long before Twitter became a harbor for the dregs of humanity. It's not worth it to stay there any longer. It's sad that a space that meant so much to so many has been ruined by these assholes, but I can't spend the rest of my life mourning it. Hopefully Musk snuffs it soon enough.</p>
+
+<p>Reddit, too, became too much of a platform for arguing. The deterioration of the communities I liked there - /r/baseball, /r/SquaredCircle, and /r/rollercoasters to name a few - kept nagging at me, a reminder that it was probably time to move on. The “hivemind” of the various subreddits led to a disconcerting homogenization of opinion. Dissent is often met with anger and derision. And not only that, Redditors generally give some of the <i>worst advice I've ever seen.</i> It's become such a common thing to see that I often assume you'll actually want to do the opposite of whatever the popular Reddit advice says to do on any given subject.</p>
+
+<p>From a practical standpoint, the thing I really miss most about those sites is the immediacy of news updates. I replaced the stream of information from those sites with a collection of RSS feeds aggregated on Inoreader, and it's largely been successful. I've effectively curated my own Reddit front page and cut out the middle man. The use of an RSS aggregator in itself is kind of an old-school Internet activity.</p>
+
+<p>One thing I lament about the current Internet is that the older days of the Internet fostered an environment of small individualized sites based on hobbies and interests. ColinFahey.com is one that sticks out in my memory. There was a funny site run by a gay couple where there were pages upon pages of one guy documenting his chronic sinus issues. Chris Pirillo's old site LockerGnome was another that fit the spirit. (Wonder if the old Chris Pirillo effect is still true - Chris Pirillo, Chris Pirillo, Chris Pirillo. If you happen to find this page, Chris, shoot me a DM on Instagram! My username is msuts.)</p>
+
+<p>I miss the quirkiness of these old sites. The decentralized, community-based nature of these sites gave each one a unique spirit. The early 2000s Sonic “scene,” for example, had about half a dozen popular sites that all offered their own vibes. Edgelords liked Sonic CulT. Nerds liked Simon Wai's Sonic 2 Beta. Furries liked Sonic Classic. Mouth breathers liked the official Sega forums.</p>
+
+<p>Stepping back from Reddit and Twitter meant that I no longer had an outlet for my thoughts and experiences. I couldn't talk about the things I liked or post things that I made. So why not harken back to the spirit of the “old Internet" with an old-school site of my own? No algorithms, no fancy designs, no mean comments, and no LLM-generated dreck. Just basic HTML and my words. If someone dislikes it, they can just go somewhere else. Why give strangers the power to be anonymously mean to me? The reality of the current world is difficult enough as-is. This site represents something that nobody else can corrupt because it's just me. And it doesn't make me lonely, because I never felt like I was a part of the rest of the Internet, either. If I want to be with other people, that's what real life is for.</p>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("../footers/footer_thoughts.html")  // Adjust path as needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log("Footer loaded successfully");
+            document.getElementById("container").insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => console.error("Error loading footer:", error));
+});
+
+</script>
+</div>

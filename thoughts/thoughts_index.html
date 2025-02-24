@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Sutter's Website - Thoughts</title>
+    <meta name="description" content="Miscellaneous thoughts. Creed thoughts.">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div id="container" class="index-page">
+        <h1>Thoughts</h1>
+        <div class="blurb">
+            <p>Here you'll find miscellaneous writings.</p>
+            <p>Newest posts are at the top.</p>
+        </div> 
+        <div class="pages-list">
+            <h2>Pages</h2>
+            <ul>
+				<li><b><a href="why.html">Why I decided to make an old-school website</a></b> - 2/23/2025</li>
+                <!-- Add more pages as needed -->
+            </ul>
+        </div>
+		<br>
+		<script>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("../footers/footer_main.html")  // Adjust path as needed
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log("Footer loaded successfully");
+            document.getElementById("container").insertAdjacentHTML("beforeend", data);
+        })
+        .catch(error => console.error("Error loading footer:", error));
+});
+
+</script>
+    </div>
+</body>
+</html>
